@@ -8,7 +8,7 @@ def solve_cube():
     data = request.get_json()  #json body with 'cube_state'
     cubestring = data['cube_state']
     
-    # Use rubik_solver to solve the cube
+    # use rubik_solver to solve the cube
     try:
         moves = str(utils.solve(cubestring, 'Kociemba'))
         moves = moves.strip('[]')

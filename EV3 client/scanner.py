@@ -7,7 +7,7 @@ color_sensor.MODE_RGB_RAW
 cubestring = ''
 
 def scan():
-    r, g, b = color_sensor.rgb
+    r, g, b = color_sensor.rgb      #rgb ranges defined as colours
     global cubestring
     
     if 130<r<200 and 20<g<130 and 30<b<100:
