@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from ev3dev2.sensor.lego import ColorSensor
 from ev3dev2.sensor import *
-import time
 
 color_sensor = ColorSensor(INPUT_1)
 color_sensor.MODE_RGB_RAW
