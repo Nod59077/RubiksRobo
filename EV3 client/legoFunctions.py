@@ -73,6 +73,7 @@ def finishscan():       #ready cube for solver
 
 def scanface():                         #scans the each face in a particular order, see server.py
     color_sensor.MODE_RGB_RAW
+    t.sleep(1)
     if flipperstate == 'down':          #makes sure flipper is not down when face is scanned
         lift()
     scanmover.on_for_degrees(10, -84)
