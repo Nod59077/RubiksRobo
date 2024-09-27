@@ -3,10 +3,10 @@ from ev3dev2.sensor.lego import ColorSensor
 from ev3dev2.sensor import *
 
 color_sensor = ColorSensor(INPUT_1)
-color_sensor.MODE_RGB_RAW
 cubestring = ''
 
 def scan():
+    color_sensor.MODE_RGB_RAW
     r, g, b = color_sensor.rgb      #rgb ranges defined as colours
     global cubestring
     

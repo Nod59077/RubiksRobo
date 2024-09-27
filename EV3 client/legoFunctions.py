@@ -1,10 +1,8 @@
 from ev3dev2.motor import *                  #import lego modules
 import scanner
 import time as t
-from ev3dev2.sensor.lego import ColorSensor
-from ev3dev2.sensor import *
 
-color_sensor = ColorSensor(INPUT_1)
+
 table = MediumMotor(OUTPUT_A)               #turntable on port a
 flipper = LargeMotor(OUTPUT_B)              #flipper on port b
 scanmover = LargeMotor(OUTPUT_C)            #motor moving scanner on port c
@@ -72,8 +70,6 @@ def finishscan():       #ready cube for solver
     
 
 def scanface():                         #scans the each face in a particular order, see server.py
-    color_sensor.MODE_RGB_RAW
-    t.sleep(1)
     if flipperstate == 'down':          #makes sure flipper is not down when face is scanned
         lift()
     scanmover.on_for_degrees(10, -84)
