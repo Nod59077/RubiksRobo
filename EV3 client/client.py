@@ -16,6 +16,7 @@ def send_cube_state():
         for m in solvelist:         #perform moves in solvelist using command function
             command(m)
         lift()
+        quit()
     else:
         print('Error')
 
