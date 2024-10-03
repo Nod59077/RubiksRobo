@@ -3,8 +3,13 @@ import requests
 from legoFunctions import *
 from commandFunction import command
 import scanner
+from ev3dev2.sensor.lego import ColorSensor
+from ev3dev2.sensor import *
+
+color_sensor = ColorSensor(INPUT_1)
 
 def send_cube_state():
+    color_sensor.MODE_RGB_RAW
     scancube()          #scan the cube
     cube_state = scanner.cubestring     #cube_state becomes a string of all coloured tiles on the cube
     url = 'http://192.168.137.1:5000/solve'
