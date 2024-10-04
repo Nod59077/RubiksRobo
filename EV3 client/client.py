@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import requests
+import requests                                 #import all necessary libraries
 from legoFunctions import *
 from commandFunction import command
 import scanner
