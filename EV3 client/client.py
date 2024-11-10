@@ -5,8 +5,10 @@ from commandFunction import command
 import scanner
 from ev3dev2.sensor.lego import ColorSensor
 from ev3dev2.sensor import *
+import time
 
 color_sensor = ColorSensor(INPUT_1)
+time.sleep(2)
 
 def send_cube_state():
     color_sensor.MODE_RGB_RAW
