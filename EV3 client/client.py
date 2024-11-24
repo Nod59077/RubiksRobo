@@ -8,10 +8,11 @@ from ev3dev2.sensor import *
 import time
 
 color_sensor = ColorSensor(INPUT_1)
-time.sleep(2)
+
 
 def send_cube_state():
     color_sensor.MODE_RGB_RAW
+    time.sleep(2)
     scancube()          #scan the cube
     cube_state = scanner.cubestring     #cube_state becomes a string of all coloured tiles on the cube
     url = 'http://192.168.137.1:5000/solve'
